@@ -65,11 +65,15 @@ while True:
 
         for i, line in enumerate(lines):
             if search.lower() in line.lower():
+                # find the start marker '->\n' going backwards
+                start = i
+                while start > 0 and lines[start].strip() != "->":
+                    start -= 1
                 print("\n----Contact Found----")
                 found = 1
-                print("=>\n    " + line, end="")
-                if i + 1 < len(lines):
-                    print("    " + lines[i + 1], end="")
+                # print name and number lines (marker is at start, name at start+1, number at start+2)
+                print("=>\n    " + lines[start + 1], end="")
+                print("    " + lines[start + 2], end="")
         if found == 0:print("Contact Not Found !")
         else:pass
     
@@ -95,7 +99,7 @@ while True:
             edit_Line = None
             
             if found == 1:
-                edit_Line = content[count-1]
+                edit_Line = content[count]
             
                 new_name = input("Enter New Name : ")
                 new_contact = input("Enter New Contact Number : ")
@@ -199,8 +203,12 @@ while True:
 
             Mark2In = content_2.index(marker, index)
             
-            for i in range(index, Mark2In + 1):
-                content.pop(index - 1)
+            # The block starts 2 lines before match: blank line + "->\n"
+            block_start = index - 2  
+            lines_to_delete = Mark2In - block_start + 1
+
+            for _ in range(lines_to_delete):
+                content.pop(block_start)
 
         except ValueError:
 
