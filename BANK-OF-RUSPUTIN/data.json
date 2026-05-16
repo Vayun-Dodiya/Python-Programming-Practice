@@ -1,0 +1,55 @@
+{
+    "1001": {
+        "name": "Alice Smith",
+        "PIN": "3011",
+        "balance": "10000.0",
+        "transaction_history": [
+            "10-05-2026 at 19:33:18 | 500D",
+            "10-05-2026 at 19:33:18 | 100W",
+            "10-05-2026 at 22:13:42 | 200W",
+            "10-05-2026 at 22:13:56 | 200W",
+            "10-05-2026 at 22:15:06 | 10000D",
+            "15-05-2026 at 11:49:09 | 10.5W",
+            "15-05-2026 at 11:50:02 | 10.5D"
+        ],
+        "Activity": "UNLOCKED",
+        "Admin Pin": "3008",
+        "Security Question": {
+            "What's your favorite Color": "red"
+        },
+        "Status":"Active"
+    },
+    "1002": {
+        "name": "Bob Johnson",
+        "PIN": "1111",
+        "balance": "199.0",
+        "transaction_history": [
+            "10-05-2026 at 19:33:18 | 500D",
+            "10-05-2026 at 19:33:18 | 50W",
+            "15-05-2026 at 12:05:22 | 250.0W",
+            "15-05-2026 at 12:06:51 | 10.0W"
+        ],
+        "Activity": "UNLOCKED",
+        "Admin Pin": "3008",
+        "Security Question": {
+            "What's your favorite Color": "red"
+        },
+        "Status":"Active"
+    },
+    "1003": {
+        "name": "Charlie Davis",
+        "PIN": "1156",
+        "balance": "450",
+        "transaction_history": [
+            "10-05-2026 at 19:33:18 | 250D",
+            "10-05-2026 at 19:33:18 | 250D",
+            "10-05-2026 at 19:33:18 | 100W"
+        ],
+        "Activity": "UNLOCKED",
+        "Admin Pin": "3008",
+        "Security Question": {
+            "What's your favorite Color": "red"
+        },
+        "Status":"Active"
+    }
+}
